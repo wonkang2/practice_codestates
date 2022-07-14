@@ -1,8 +1,8 @@
-
+package kiosk;
 import java.util.Scanner;
 
 // Kiosk_Program 클래스를 정의 합니다.
-public class Kiosk_Program {
+public class KioskProgram {
     //TODO:
     // 메뉴 입력 및 사용자의 수량을 입력하기 위해 Scanner 객체 생성
     static Scanner sc = new Scanner(System.in);
@@ -50,6 +50,8 @@ public class Kiosk_Program {
             System.out.println("[경고]메뉴에 포함된 번호를 입력하여 주세요.\n");
             // 그리고 다시 본 함수가 동작하여 다시 메뉴의 번호를 입력하도록 합니다.
             count();
+        }else {
+
         }
 
         // 이후 가격 연산을 위해
@@ -60,10 +62,11 @@ public class Kiosk_Program {
             number = menu_2_cost;
         } else if (3 == number) {
             number = menu_3_cost;
-        } else {
+        } else if (4 == number){
             number = menu_4_cost;
         }
         return number;
+
     }
 
     /**
@@ -107,11 +110,5 @@ public class Kiosk_Program {
      * @main() 메서드 동작
      * 프로그램 실행 -> 메뉴 입력 -> 수량 입력 및 가격 계산 -> 가격 출력
      */
-    public static void main(String[] args) {
-        //TODO:
-        Kiosk_Program.input_print();
-        Kiosk_Program.cost(Kiosk_Program.count());
-        Kiosk_Program.output_print(Kiosk_Program.result);
 
-    }
 }
